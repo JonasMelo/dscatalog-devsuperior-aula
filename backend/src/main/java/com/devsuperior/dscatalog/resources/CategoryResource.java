@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.dscatalog.entities.Category;
 
-@RestController
-@RequestMapping(value="/categories") 
+@RestController /* Annotation para dizer que implementa REST*/
+@RequestMapping(value="/categories") /* Anotation para mostrar a rota*/
 public class CategoryResource {
-	@GetMapping 
+	@GetMapping /* Anottation dizendo que é webservice*/ 
 	public ResponseEntity<List <Category>>  findAll(){
 		List <Category> list= new ArrayList<>();
 		list.add(new Category(1L,"Books"));
